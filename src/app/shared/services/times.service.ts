@@ -14,4 +14,8 @@ export class TimesService {
   listarTimes(): Observable<any[]> {
     return this.http.get<any>(`${API}times`);
   }
+
+  criarTimes(timeDTO: any): Observable<any> {
+    return this.http.post<any>(`${API}times`, timeDTO);
+  }
 }

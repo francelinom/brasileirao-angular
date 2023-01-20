@@ -1,1 +1,60 @@
-<p>create-times works!</p>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <div class="example-container">
+
+    <mat-form-field hintLabel="Max 20 characters" appearance="fill">
+      <mat-label>Digite o nome do time</mat-label>
+      <input matInput #input maxlength="20" placeholder="Nome do Time" formControlName="nome">
+      <mat-hint align="end">{{input.value.length}}/20</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>UF do Time</mat-label>
+      <mat-select formControlName="uf">
+        <mat-option value="AC">AC</mat-option>
+        <mat-option value="AL">AL</mat-option>
+        <mat-option value="AM">AM</mat-option>
+        <mat-option value="AP">AP</mat-option>
+        <mat-option value="BA">BA</mat-option>
+        <mat-option value="CE">CE</mat-option>
+        <mat-option value="DF">DF</mat-option>
+        <mat-option value="ES">ES</mat-option>
+        <mat-option value="GO">GO</mat-option>
+        <mat-option value="MA">MA</mat-option>
+        <mat-option value="MT">MT</mat-option>
+        <mat-option value="MS">MS</mat-option>
+        <mat-option value="MG">MG</mat-option>
+        <mat-option value="PA">PA</mat-option>
+        <mat-option value="PA">PA</mat-option>
+        <mat-option value="PB">PB</mat-option>
+        <mat-option value="PE">PE</mat-option>
+        <mat-option value="PI">PI</mat-option>
+        <mat-option value="RJ">RJ</mat-option>
+        <mat-option value="RN">RN</mat-option>
+        <mat-option value="RS">RS</mat-option>
+        <mat-option value="RO">RO</mat-option>
+        <mat-option value="RR">RR</mat-option>
+        <mat-option value="SC">SC</mat-option>
+        <mat-option value="SP">SP</mat-option>
+        <mat-option value="SE">SE</mat-option>
+        <mat-option value="TO">TO</mat-option>
+      </mat-select>
+      <mat-hint align="end">Selecione a UF do Time</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field hintLabel="Max 4 characters" appearance="fill">
+      <mat-label>Digite a sigla do time</mat-label>
+      <input matInput #input maxlength="4" placeholder="Sigla do Time" formControlName="sigla">
+      <mat-hint align="end">{{input.value.length}}/4</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field hintLabel="Max 20 characters" appearance="fill">
+      <mat-label>Digite o nome do Estadio</mat-label>
+      <input matInput #input maxlength="20" placeholder="Nome do Estadio" formControlName="estadio">
+      <mat-hint align="end">{{input.value.length}}/20</mat-hint>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" class="margin-top-left">
+    Salvar
+  </button>
+</form>
+
