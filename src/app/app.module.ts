@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CampeonatoModule } from './components/campeonato/campeonato.module';
+import { NbThemeModule, NbLayoutModule, NbSidebarModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,10 @@ import { CampeonatoModule } from './components/campeonato/campeonato.module';
     BrowserAnimationsModule,
     CampeonatoModule,
     MatToolbarModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbSidebarModule.forRoot(),
+    NbLayoutModule,
+    NbEvaIconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

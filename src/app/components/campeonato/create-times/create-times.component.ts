@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-create-times',
   templateUrl: './create-times.component.html',
-  styleUrls: ['./create-times.component.css'],
+  styleUrls: ['./create-times.component.scss'],
 })
 export class CreateTimesComponent implements OnInit {
   formulario!: FormGroup;

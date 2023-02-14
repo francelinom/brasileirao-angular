@@ -4,7 +4,7 @@ import { TimesService } from 'src/app/shared/services/times.service';
 @Component({
   selector: 'app-list-times',
   templateUrl: './list-times.component.html',
-  styleUrls: ['./list-times.component.css'],
+  styleUrls: ['./list-times.component.scss'],
 })
 export class ListTimesComponent implements OnInit {
   displayedColumns: string[] = [

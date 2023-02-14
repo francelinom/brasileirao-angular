@@ -1,5 +1,14 @@
-<mat-toolbar color="primary">
-  <span>Campeonato Brasileiro</span>
-</mat-toolbar>
-<app-campeonato></app-campeonato>
-<router-outlet></router-outlet>
+<nb-layout>
+  <nb-layout-header fixed>
+    <mat-toolbar color="primary">
+      <span>Campeonato Brasileiro</span>
+    </mat-toolbar>
+  </nb-layout-header>
+
+  <nb-sidebar>Sidebar Content</nb-sidebar>
+
+  <nb-layout-column>
+    <app-campeonato></app-campeonato>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+</nb-layout>
